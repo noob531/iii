@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>모던 반응형 웹페이지 | Modern Web</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-cube logo-icon"></i>
+        <span>Studio<span class="highlight">Wave</span></span>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="#home" class="nav-link active">홈</a>
+        <a href="#features" class="nav-link">주요 기능</a>
+        <a href="#demo" class="nav-link">인터랙티브 데모</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#contact" class="nav-link">문의하기</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- 다크모드 토글 버튼 -->
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 전환">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- 모바일 햄버거 메뉴 버튼 -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="badge">
+          <i class="fa-solid fa-sparkles"></i> 모던 웹 표준 & 반응형 디자인
+        </div>
+        <h1 class="hero-title">
+          아이디어를 현실로 구현하는<br>
+          <span class="gradient-text">감각적인 웹페이지</span>
+        </h1>
+        <p class="hero-description">
+          깔끔한 HTML5, 세련된 CSS3 스타일링, 다이내믹한 JavaScript 기능이 모두 갖춰진 웹 템플릿입니다. 모바일과 데스크톱 어디서든 완벽하게 동작합니다.
+        </p>
+        <div class="hero-buttons">
+          <a href="#demo" class="btn btn-primary">
+            체험해보기 <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#features" class="btn btn-secondary">
+            기능 둘러보기
+          </a>
+        </div>
+        
+        <!-- 실시간 통계 카드 -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">반응형 디자인</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Dark & Light</span>
+            <span class="stat-label">테마 모드 지원</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-number">Zero Lib</span>
+            <span class="stat-label">순수 바닐라 JS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="glass-card main-card">
+          <div class="card-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="card-title">Preview Dashboard</span>
+          </div>
+          <div class="card-body">
+            <div class="preview-item">
+              <i class="fa-solid fa-bolt icon-accent"></i>
+              <div>
+                <h4>초고속 렌더링</h4>
+                <p>외부 프레임워크 없이 가볍고 빠른 성능</p>
+              </div>
+            </div>
+            <div class="preview-item">
+              <i class="fa-solid fa-palette icon-accent"></i>
+              <div>
+                <h4>트렌디한 UI 컴포넌트</h4>
+                <p>글래스모피즘 & 부드러운 애니메이션</p>
+              </div>
+            </div>
+            <div class="preview-item">
+              <i class="fa-solid fa-mobile-screen icon-accent"></i>
+              <div>
+                <h4>모바일 최적화</h4>
+                <p>다양한 해상도에 자동 대응하는 유연한 그리드</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="section features-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">KEY FEATURES</span>
+        <h2 class="section-title">주요 기능 안내</h2>
+        <p class="section-subtitle">현대적인 웹 사이트에 필요한 핵심 요소들을 모두 담았습니다.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon bg-indigo">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <h3>다크 / 라이트 모드</h3>
+          <p>우측 상단의 토글 버튼으로 눈이 편안한 다크 모드와 산뜻한 라이트 모드를 자유롭게 전환할 수 있습니다. 브라우저 저장소에 설정이 저장됩니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-blue">
+            <i class="fa-solid fa-compass-drafting"></i>
+          </div>
+          <h3>모바일 완벽 호환 반응형</h3>
+          <p>스마트폰, 태블릿, PC 등 화면 크기에 맞춰 레이아웃과 모바일 햄버거 메뉴가 자연스럽게 최적화됩니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-purple">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h3>인터랙티브 기능 내장</h3>
+          <p>할 일 관리, 아코디언 FAQ, 폼 유효성 검사 및 토스트 알림 등 실제로 작동하는 인터랙션을 경험할 수 있습니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon bg-emerald">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <h3>깔끔한 코드 구조</h3>
+          <p>HTML, CSS, JavaScript가 명확히 분리되어 있어 원하는 디자인이나 문구로 누구나 쉽게 수정하고 확장할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Demo Section (할 일 메모 & 인터랙션) -->
+  <section id="demo" class="section demo-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">LIVE DEMO</span>
+        <h2 class="section-title">직접 체험해보는 인터랙티브 위젯</h2>
+        <p class="section-subtitle">자바스크립트로 동작하는 미니 할 일 앱을 페이지 내에서 바로 사용해보세요.</p>
+      </div>
+
+      <div class="demo-wrapper">
+        <div class="todo-card">
+          <div class="todo-header">
+            <h3><i class="fa-solid fa-clipboard-check"></i> 오늘의 작업 메모</h3>
+            <span id="taskCounter" class="task-counter">0개 남음</span>
+          </div>
+
+          <form id="todoForm" class="todo-input-group">
+            <input type="text" id="todoInput" placeholder="새로운 할 일을 입력하세요..." autocomplete="off">
+            <button type="submit" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-plus"></i> 추가
+            </button>
+          </form>
+
+          <ul id="todoList" class="todo-list">
+            <!-- 자바스크립트로 동적 렌더링 -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section (아코디언) -->
+  <section id="faq" class="section faq-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">자주 묻는 질문</h2>
+        <p class="section-subtitle">웹페이지 구성과 사용법에 대해 궁금한 점을 확인하세요.</p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>이 웹페이지는 어떻게 실행하나요?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>별도의 서버 설치 없이 생성된 <code>index.html</code> 파일을 더블클릭하거나 웹 브라우저(크롬, 엣지, 웨일 등)로 드래그하면 바로 열립니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>내용이나 디자인을 바꾸려면 어떻게 하나요?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p><code>index.html</code>에서 텍스트와 구성을 바꾸고, <code>style.css</code>에서 색상 및 폰트 크기를 수정하면 나만의 맞춤형 페이지로 손쉽게 커스터마이징할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>외부 라이브러리 설치가 필요한가요?</span>
+            <i class="fa-solid fa-chevron-down faq-arrow"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Node.js나 빌드 도구 없이 순수한 HTML, CSS, JavaScript로 제작되어 있어 가볍고 배포가 매우 간편합니다. 폰트와 아이콘은 CDN을 통해 자동으로 불러옵니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">CONTACT</span>
+        <h2 class="section-title">문의 및 피드백</h2>
+        <p class="section-subtitle">궁금하신 사항이나 남기실 의견을 적어 전송해보세요.</p>
+      </div>
+
+      <div class="contact-card">
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="userName">이름 / 닉네임</label>
+            <input type="text" id="userName" placeholder="홍길동" required>
+          </div>
+          <div class="form-group">
+            <label for="userEmail">이메일 주소</label>
+            <input type="email" id="userEmail" placeholder="example@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="userMessage">메시지 내용</label>
+            <textarea id="userMessage" rows="4" placeholder="문의하실 내용을 자유롭게 적어주세요." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            <i class="fa-solid fa-paper-plane"></i> 메시지 보내기
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo">
+          <i class="fa-solid fa-cube logo-icon"></i>
+          <span>Studio<span class="highlight">Wave</span></span>
+        </div>
+        <p class="footer-tagline">사용자 경험을 생각하는 모던 웹 디자인 솔루션</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">홈</a>
+        <a href="#features">기능</a>
+        <a href="#demo">데모</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">문의</a>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 StudioWave. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 알림 토스트 (알림 메시지 팝업) -->
+  <div id="toastNotification" class="toast-notification"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
