@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>건축광장 | 2026 글로벌 건축디자인 포럼 ARCHI·FORUM</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="forum-page-body">
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon-box">
+          <i class="fa-solid fa-compass-drafting logo-icon"></i>
+        </div>
+        <div class="logo-text">
+          <span class="logo-main">ARCHI<span class="highlight">·FORUM</span></span>
+          <span class="logo-sub">2026 건축디자인 포럼</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navMenu">
+        <a href="index.html#home" class="nav-link">포럼 소개</a>
+        <a href="index.html#agenda" class="nav-link">세션 아젠다</a>
+        <a href="index.html#showcase" class="nav-link">쇼케이스</a>
+        <a href="forum.html" class="nav-link active">건축광장</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- 다크모드 토글 버튼 -->
+        <button id="themeToggle" class="theme-toggle" aria-label="테마 전환" title="다크/라이트 모드 전환">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- 메인 홈 복귀 버튼 -->
+        <a href="index.html" class="btn btn-secondary btn-nav-cta">
+          <i class="fa-solid fa-arrow-left"></i> 포럼 홈
+        </a>
+
+        <!-- 모바일 햄버거 메뉴 버튼 -->
+        <button id="mobileMenuBtn" class="mobile-toggle" aria-label="메뉴 열기">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Forum Page Header / Hero Banner -->
+  <section class="forum-hero-banner">
+    <div class="blueprint-grid-overlay"></div>
+    <div class="container forum-hero-container">
+      <div class="forum-breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house"></i> 포럼 홈</a>
+        <i class="fa-solid fa-chevron-right breadcrumb-sep"></i>
+        <span>건축광장</span>
+      </div>
+      <div class="badge">
+        <i class="fa-solid fa-comments"></i> ARCHITECTURE & DESIGN SQUARE
+      </div>
+      <h1 class="forum-hero-title">
+        건축인 열린 담론의 장,<br>
+        <span class="gradient-text">건축광장 (Archi·Square)</span>
+      </h1>
+      <p class="forum-hero-desc">
+        실제 참가자와 현업 건축가들이 직접 질의하고 의견을 나누는 공간입니다.<br>
+        설계 실무, 친환경 목구조, AI 도입, 도시 정책에 대한 생각을 자유롭게 등록해보세요.
+      </p>
+    </div>
+  </section>
+
+  <!-- Forum Main Board Section -->
+  <main class="forum-main-section">
+    <div class="container">
+      <div class="forum-board-card">
+        <!-- 상단 헤더 & 카운터 -->
+        <div class="forum-board-header">
+          <div class="header-title-box">
+            <h3><i class="fa-solid fa-pen-to-square"></i> 실시간 아젠다 게시판</h3>
+            <p>실제 사용자가 등록한 토론 게시글: <strong id="discussionCount">0</strong>개</p>
+          </div>
+          <span class="forum-status-badge"><i class="fa-solid fa-bolt"></i> 자유 참여 오픈</span>
+        </div>
+
+        <!-- 새 글 작성 폼 (실제 사용자가 작성) -->
+        <form id="discussionForm" class="discussion-input-group">
+          <div class="input-row">
+            <select id="topicCategory" class="topic-select" aria-label="토론 분야 선택">
+              <option value="목조·친환경">🌿 목조·친환경</option>
+              <option value="AI·파라메트릭">🤖 AI·파라메트릭</option>
+              <option value="도시·재생">🏛️ 도시·재생</option>
+              <option value="실무·법규">📐 실무·법규</option>
+              <option value="자유토론">💡 자유토론</option>
+            </select>
+            <input type="text" id="authorInput" placeholder="작성자명 (예: 김건축 소장)" maxlength="25" required>
+          </div>
+          <div class="input-row-full">
+            <input type="text" id="topicInput" placeholder="토론 주제 또는 질문 제목을 입력하세요" required autocomplete="off">
+          </div>
+          <div class="input-row-full">
+            <textarea id="contentInput" rows="3" placeholder="자세한 질문 배경이나 건축적 의견을 적어주세요 (선택 사항)"></textarea>
+          </div>
+          <div class="form-submit-row">
+            <button type="submit" class="btn btn-primary btn-submit-topic">
+              <i class="fa-solid fa-paper-plane"></i> 아젠다 게시글 등록하기
+            </button>
+          </div>
+        </form>
+
+        <!-- 카테고리 필터 탭 -->
+        <div class="discussion-filter-tabs">
+          <button class="d-filter-btn active" data-dfilter="all">전체보기</button>
+          <button class="d-filter-btn" data-dfilter="목조·친환경">목조·친환경</button>
+          <button class="d-filter-btn" data-dfilter="AI·파라메트릭">AI·파라메트릭</button>
+          <button class="d-filter-btn" data-dfilter="도시·재생">도시·재생</button>
+          <button class="d-filter-btn" data-dfilter="실무·법규">실무·법규</button>
+          <button class="d-filter-btn" data-dfilter="자유토론">자유토론</button>
+        </div>
+
+        <!-- 게시글 목록 (더미 게시글 모두 삭제됨, 실제 사용자 작성 글만 표시) -->
+        <ul id="discussionList" class="discussion-list">
+          <!-- 자바스크립트로 동적 렌더링 -->
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon-box">
+              <i class="fa-solid fa-compass-drafting logo-icon"></i>
+            </div>
+            <div class="logo-text">
+              <span class="logo-main">ARCHI<span class="highlight">·FORUM</span></span>
+              <span class="logo-sub">GLOBAL ARCHITECTURAL FORUM</span>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            지속 가능한 공간의 미학과 미래 도시 담론을 이끄는 글로벌 건축 디자인 학술 교류 플랫폼
+          </p>
+          <div class="footer-socials">
+            <a href="#" aria-label="인스타그램"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="링크드인"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="유튜브"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="깃허브"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>포럼 바로가기</h4>
+          <ul>
+            <li><a href="index.html#home">포럼 소개</a></li>
+            <li><a href="index.html#agenda">세션 아젠다</a></li>
+            <li><a href="index.html#showcase">프로젝트 쇼케이스</a></li>
+            <li><a href="forum.html">건축광장</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>포럼 사무국 정보</h4>
+          <p class="footer-info-text"><i class="fa-solid fa-location-dot"></i> 서울특별시 중구 을지로 281 DDP 배움터 4F</p>
+          <p class="footer-info-text"><i class="fa-solid fa-phone"></i> 02-3456-7890 (포럼 운영사무국)</p>
+          <p class="footer-info-text"><i class="fa-solid fa-envelope"></i> secretariat@archi-forum.org</p>
+          <p class="footer-info-text"><i class="fa-solid fa-certificate"></i> 주최: 한국건축디자인학회, 글로벌건축포럼위원회</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 ARCHI·FORUM (대한민국 건축디자인 포럼). All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">개인정보 처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">프레스킷 다운로드</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 알림 토스트 (알림 메시지 팝업) -->
+  <div id="toastNotification" class="toast-notification"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
